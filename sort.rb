@@ -21,16 +21,13 @@ def sort_people(people, comparer)
   end
 end
 
-grab_age = lambda do |person|
-    person.age
-end
-
-grab_name = lambda do |person|
-  person.name
-end
+# grab_age = lambda do |person|
+#     person.age
+# end
 
 
-sorted_people = sort_people(people, grab_name)
+sorted_people = sort_people(people, 
+  lambda { |person| person.age})
 
 puts sorted_people.inspect
 
